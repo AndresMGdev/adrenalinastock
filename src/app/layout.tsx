@@ -6,8 +6,8 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ProStock",
-  description: "Is a proyect for Talento Tech",
+  title: "AdrenalinaStock",
+  description: "Is a proyect with ❤️",
 };
 
 export default function RootLayout({
