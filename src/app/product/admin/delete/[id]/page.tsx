@@ -45,7 +45,7 @@ export default function DeleteProduct({ params }: { params: { id: string } }) {
 
     return (
         <>
-            <div className="container mx-auto mt-8 w-full flex justify-items-center">
+            <div className="container mx-auto mt-8 w-full flex flex-col items-center">
                 <div className="card bg-base-100 w-96 shadow-xl">
                     <div className="card-body">
                         <div className="flex justify-between items-center pb-4 border-b border-dashed border-gray-900 mb-4">
