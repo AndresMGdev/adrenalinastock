@@ -15,7 +15,7 @@ const ProfilePage = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user && user.email) {
         setEmail(user.email); // Establece el correo del usuario autenticado
-        
+
         // Obtener la parte del nombre y apellido del email
         const emailNamePart = user.email.split('@')[0]; // Ejemplo: 'carlos.mendoza'
         const nameParts = emailNamePart.split('.'); // Separar por el punto
@@ -49,11 +49,15 @@ const ProfilePage = () => {
 
   return (
     <div className="container mx-auto mt-8 max-w-[560px]">
-      <div className="flex justify-between items-center pb-4 border-b border-dashed border-gray-900 mb-4">
-        <h1 className="text-3xl font-semibold">Perfil</h1>
+      <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card-body">
+          <div className="flex justify-between items-center pb-4 border-b border-dashed border-gray-900 mb-4">
+            <h1 className="text-3xl font-semibold">Perfil</h1>
+          </div>
+          <p>Correo: {email}</p>
+          <p>Nombre: {firstName} {lastName}</p>
+        </div>
       </div>
-      <p>Correo: {email}</p>
-      <p>Nombre: {firstName} {lastName}</p> {/* Mostramos los nombres separados */}
     </div>
   );
 };

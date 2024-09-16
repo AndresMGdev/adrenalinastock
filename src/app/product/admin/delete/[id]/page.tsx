@@ -45,27 +45,32 @@ export default function DeleteProduct({ params }: { params: { id: string } }) {
 
     return (
         <>
-            <div className="container mx-auto mt-8 max-w-[560px]">
-                <div className="flex justify-between items-center pb-4 border-b border-dashed border-gray-900 mb-4">
-                    <h1 className="text-3xl font-semibold">Eliminar Producto</h1>
+            <div className="container mx-auto mt-8 w-full">
+                <div className="card bg-base-100 w-96 shadow-xl">
+                    <div className="card-body">
+                        <div className="flex justify-between items-center pb-4 border-b border-dashed border-gray-900 mb-4">
+                            <h1 className="text-3xl font-semibold">Eliminar Producto</h1>
+                        </div>
+                        <div className="mb-4">
+                            <p>Seguroque quiere eliminar el siguiente <strong>{productName}</strong>? Esta accón no es reversible.</p>
+                        </div>
+                        <div className="flex justify-between">
+                            <button
+                                className="bg-red-600 hover:bg-opacity-80 text-white rounded-lg px-4 py-2 duration-200"
+                                onClick={handleDelete}
+                            >
+                                Eliminar
+                            </button>
+                            <button
+                                className="bg-gray-600 hover:bg-opacity-80 text-white rounded-lg px-4 py-2 duration-200"
+                                onClick={() => router.push("/product/admin")}
+                            >
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div className="mb-4">
-                    <p>Seguroque quiere eliminar el siguiente <strong>{productName}</strong>? Esta accón no es reversible.</p>
-                </div>
-                <div className="flex justify-between">
-                    <button
-                        className="bg-red-600 hover:bg-opacity-80 text-white rounded-lg px-4 py-2 duration-200"
-                        onClick={handleDelete}
-                    >
-                        Eliminar
-                    </button>
-                    <button
-                        className="bg-gray-600 hover:bg-opacity-80 text-white rounded-lg px-4 py-2 duration-200"
-                        onClick={() => router.push("/product/admin")}
-                    >
-                        Cancelar
-                    </button>
-                </div>
+
             </div>
             <Head>
                 <title>Eliminar Producto</title>
