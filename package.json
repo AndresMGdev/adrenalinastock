@@ -1,5 +1,5 @@
 {
-  "name": "adrenalinastock",
+  "name": "mockups-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^10.13.0",
+    "mockups-app": "file:",
+    "next": "14.2.3",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.7"
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "daisyui": "^4.12.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.7"
+    "typescript": "^5"
   }
 }
